@@ -1,0 +1,15 @@
+<p>All Users</p>
+<br><a href="/">Return Home</a>
+
+<ul>
+<% users.forEach( (user) => { %>
+
+<li><%= user.username %></li>
+<li style="margin-left: 40px">password: <%= user.password %> </li>
+<li style="margin-left: 40px">hometown: <%= user.hometown %> </li>
+<li style="margin-left: 40px">bio: <%= user.bio %> </li>
+<li style="margin-left: 40px">caloriegoal: <%= user.caloriegoal %> </li>
+<% }); %>
+</ul>
+
+<br><a href="/">Return Home</a>

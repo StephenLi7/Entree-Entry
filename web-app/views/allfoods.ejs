@@ -1,0 +1,19 @@
+<p>All Food</p>
+<br><a href="/">Return Home</a>
+
+<ul>
+<% foods.forEach( (food) => { %>
+
+<li><%= food.foodName %></li>
+<li style="margin-left: 40px">Company: <%= food.company %> </li>
+<li style="margin-left: 40px">Calories: <%= food.calories %> </li>
+<li style="margin-left: 40px">Fat: <%= food.fat %> </li>
+<li style="margin-left: 40px">Sugar: <%= food.sugar %> </li>
+<li style="margin-left: 40px">Protein: <%= food.protein %> </li>
+<li style="margin-left: 40px">Salt: <%= food.salt %> </li>
+<li style="margin-left: 40px">Fiber: <%= food.fiber %> </li>
+<li style="margin-left: 40px">Carbs: <%= food.carbs %> </li>
+<% }); %>
+</ul>
+
+<br><a href="/">Return Home</a>

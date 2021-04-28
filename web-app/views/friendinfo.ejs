@@ -1,0 +1,68 @@
+<p style = "font-size: 20px"><%=username%>'s Friend Information</p>
+
+Delete a friend (please retype <%username%>'s username as a confirmation):
+<form action="/remove-friend" method="post">
+    Username: <input name="username">
+
+    Friend: <input name="deleteFriend">
+    <p>
+        <input type="submit" value="Delete Friend!">
+    </p>
+</form>
+
+Delete a request/invite (please retype <%username%>'s username as a confirmation):
+<form action="/remove-request" method="post">
+    Username: <input name="username">
+
+    Request/Invite Name: <input name="deleteRequest">
+    <p>
+        <input type="submit" value="Delete Request!">
+    </p>
+</form>
+
+Force add a friend (bypasses confirmation system):
+<form action="/add-friend" method="post">
+    Username: <input name="username">
+
+    Friend Name: <input name="friendAdd">
+    <p>
+        <input type="submit" value="Add Friend!">
+    </p>
+</form>
+
+Force send a friend from this user:
+<form action="/add-request" method="post">
+    Username: <input name="username">
+
+    Friend Name: <input name="requestAdd">
+    <p>
+        <input type="submit" value="Add Request!">
+    </p>
+</form>
+
+<br><a href="/public/friends.html">Search Another User</a><br>
+
+<p>Friends:</p>
+<ul>
+<% friends.forEach( (friend) => { %>
+<li><%= friend.friendName %></li>
+<% }); %>
+</ul>
+
+<p>Friends Requests (sent from this user):</p>
+<ul>
+<% requests.forEach( (request) => { %>
+<%if (request.rstatus == 'true') {%>
+<li><%= request.requestName %></li>
+<% }}); %>
+</ul>
+
+<p>Friends Invites (recieved by this user):</p>
+<ul>
+<% requests.forEach( (request) => { %>
+<%if (request.rstatus == 'false') {%>
+<li><%= request.requestName %></li>
+<% }}); %>
+</ul>
+
+<br><a href="/">Return Home</a>

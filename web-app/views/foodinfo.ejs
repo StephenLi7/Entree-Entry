@@ -1,0 +1,38 @@
+<p style = "font-size: 20px"><%=username%>'s Friend Information</p>
+
+Delete a food (please retype <%username%>'s username as a confirmation):
+<form action="/remove-food" method="post">
+    Username: <input name="username">
+    Date: <input name="deleteDate">
+    Food Type: <input name="deleteName">
+    Calories Consumed: <input name="deleteCal">
+    <p>
+        <input type="submit" value="Remove Food!">
+    </p>
+</form>
+
+Add a food:
+<form action="/add-food" method="post">
+    Username: <input name="username">
+    Date: <input name="addDate">
+    Food Type: <input name="addName">
+    Calories Consumed: <input name="addCal">
+    <p>
+        <input type="submit" value="Add Food!">
+    </p>
+</form>
+
+<br><a href="/public/food.html">Search Another User</a><br>
+
+<p>Food Entries:</p>
+<ul>
+<% foodEntries.forEach( (food) => { %>
+<li>Date: <%= food.date %></li>
+<li style="margin-left: 40px">Food Type: <%= food.foodName %> </li>
+<li style="margin-left: 40px">Calories Consumed: <%= food.foodCalories %> </li>
+
+<% }); %>
+</ul>
+
+
+<br><a href="/">Return Home</a>
