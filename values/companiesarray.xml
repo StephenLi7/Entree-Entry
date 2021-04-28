@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="companies_array">
+        <item>Unilever</item>
+        <item>Nestlé</item>
+        <item>Coca Cola</item>
+        <item>Kellogg\'s</item>
+        <item>MARS</item>
+        <item>Pepsico</item>
+        <item>Mondelez International</item>
+        <item>General Mills</item>
+        <item>Associated British Foods</item>
+        <item>Danone</item>
+    </string-array>
+</resources>

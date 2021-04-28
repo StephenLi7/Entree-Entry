@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nutrition_types">
+        <item>calories</item>
+        <item>fat</item>
+        <item>fiber</item>
+        <item>sugar</item>
+        <item>salt</item>
+        <item>protein</item>
+        <item>carbs</item>
+    </string-array>
+</resources>

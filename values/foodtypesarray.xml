@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food_types_array">
+        <item>Chicken</item>
+        <item>Beef</item>
+        <item>Pork</item>
+        <item>Broccoli</item>
+        <item>Kale</item>
+        <item>Avocado</item>
+        <item>Tomato</item>
+        <item>Lettuce</item>
+        <item>Potato</item>
+        <item>Brussels Sprouts</item>
+        <item>Apple</item>
+        <item>Orange</item>
+        <item>Banana</item>
+        <item>Pear</item>
+        <item>Blueberries</item>
+        <item>Strawberries</item>
+        <item>Other</item>
+    </string-array>
+</resources>
