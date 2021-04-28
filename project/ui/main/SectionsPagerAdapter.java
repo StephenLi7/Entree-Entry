@@ -1,0 +1,57 @@
+package edu.upenn.cis350.project.ui.main;
+
+import android.content.Context;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+
+import edu.upenn.cis350.project.R;
+
+/**
+ * A [FragmentPagerAdapter] that returns a fragment corresponding to
+ * one of the sections/tabs/pages.
+ */
+public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+    @StringRes
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
+    private final Context mContext;
+    private String username;
+
+    public SectionsPagerAdapter(Context context, FragmentManager fm, String username) {
+        super(fm);
+        mContext = context;
+        this.username = username;
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        Fragment fragment = null;
+        switch (position) {
+            case 0:
+                fragment = new DailyProgressFragment(username);
+                break;
+            case 1:
+                fragment = new WeeklyProgressFragment(username);
+                break;
+            case 2:
+                fragment = new HealthScoreFragment(username);
+        }
+        return fragment;
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return mContext.getResources().getString(TAB_TITLES[position]);
+    }
+
+    @Override
+    public int getCount() {
+        // Show 2 total pages.
+        return 3;
+    }
+}
