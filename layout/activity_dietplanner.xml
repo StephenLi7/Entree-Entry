@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DietPlannerActivity">
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Your Personal Meal Planner"
+            android:textColor="#33B2FF"
+            android:textSize="40dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="145dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Each Item is 100g of that food"
+            android:textColor="#1DE41A"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/foodList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="200dp"
+            />
+
+        <TextView
+            android:id="@+id/mealCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="375dp"
+            />
+
+        <TextView
+            android:id="@+id/mealProtein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="400dp"
+            />
+
+        <TextView
+            android:id="@+id/mealCarbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="425dp"
+            />
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="475dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/desiredcalories_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Desired Calories: "
+                android:textColor="#FD970C"
+                android:textSize="25dp"/>
+
+
+            <EditText
+                android:id="@+id/calories_edit_text"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:visibility="visible"
+                android:layout_toRightOf="@id/desiredcalories_text"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:onClick="onMealCreateClick"
+            android:text="Create a meal"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

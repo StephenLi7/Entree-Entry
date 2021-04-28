@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.HealthScoreFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="20dp">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="25dp"
+           android:text="your score on:"
+           android:textSize="30dp"
+           android:gravity="center"
+           android:textColor="@color/colorPrimary"/>
+
+       <DatePicker
+           android:id="@+id/datePicker_healthScore"
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:datePickerMode="spinner"
+           android:calendarViewShown="false"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center"
+           android:gravity="center">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="15dp"
+               android:gravity="center"
+               android:text="Health Score"
+               android:textSize="15dp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="50dp"
+               android:text="Sustainability Grade"
+               android:textSize="15dp" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center"
+           android:gravity="center">
+
+           <TextView
+               android:id="@+id/scoreText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="45dp"
+               android:gravity="center"
+               android:text="10"
+               android:textSize="100dp" />
+
+           <TextView
+               android:id="@+id/gradeText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="45dp"
+               android:layout_gravity="center"
+               android:text="A"
+               android:textSize="100dp" />
+
+       </LinearLayout>
+
+
+       <RadioGroup
+           android:id="@+id/radio_group"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginTop="15dp" >
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center" >
+
+               <CheckBox
+                   android:id="@+id/radio_fat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="fat"
+                   android:textSize="15dp" />
+               <EditText
+                   android:id="@+id/edit_fat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="goal"
+                   android:layout_marginLeft="7dp"
+                   android:textSize="15dp" />
+
+               <CheckBox
+                   android:id="@+id/radio_fiber"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="fiber"
+                   android:textSize="15dp"
+                   android:layout_marginLeft="60dp"
+                   android:checked="false" />
+               <EditText
+                   android:id="@+id/edit_fiber"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="goal"
+                   android:layout_marginLeft="7dp"
+                   android:textSize="15dp" />
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center"
+               android:layout_marginTop="5dp">
+
+               <CheckBox
+                   android:id="@+id/radio_sugar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="sugar"
+                   android:textSize="15dp" />
+               <EditText
+                   android:id="@+id/edit_sugar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="goal"
+                   android:layout_marginLeft="5dp"
+                   android:textSize="15dp" />
+
+               <CheckBox
+                   android:id="@+id/radio_salt"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="salt"
+                   android:textSize="15dp"
+                   android:layout_marginLeft="60dp" />
+               <EditText
+                   android:id="@+id/edit_salt"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="goal"
+                   android:layout_marginLeft="7dp"
+                   android:textSize="15dp" />
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center"
+               android:layout_marginTop="7dp" >
+
+               <CheckBox
+                   android:id="@+id/radio_protein"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="protein"
+                   android:textSize="15dp"/>
+
+               <EditText
+                   android:id="@+id/edit_protein"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="goal"
+                   android:layout_marginLeft="7dp"
+                   android:textSize="15dp" />
+
+               <CheckBox
+                   android:id="@+id/radio_carbs"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="carbs"
+                   android:textSize="15dp"
+                   android:layout_marginLeft="60dp" />
+               <EditText
+                   android:id="@+id/edit_carbs"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="goal"
+                   android:layout_marginLeft="7dp"
+                   android:textSize="15dp" />
+           </LinearLayout>
+       </RadioGroup>
+
+       <Button
+           android:id="@+id/updateBtn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="10dp"
+           android:text="UPDATE SCORE" />
+
+   </LinearLayout>
+
+</FrameLayout>
